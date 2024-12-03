@@ -89,3 +89,33 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// Add this to your existing script.js
+document.addEventListener("DOMContentLoaded", function () {
+  const resumeBtn = document.getElementById("resumeBtn");
+  const pdfModal = document.getElementById("pdfModal");
+  const closePdfModal = document.querySelector(".close-pdf-modal");
+  const pdfFrame = document.getElementById("pdfFrame");
+
+  // Replace this URL with your Google Drive PDF link
+  const pdfUrl =
+    "https://drive.google.com/file/d/1vklNWCRFHDJjEYtoEz3gzTMQJ04_lhtc/preview";
+  resumeBtn.addEventListener("click", function (e) {
+    e.preventDefault();
+    pdfModal.style.display = "flex";
+    pdfFrame.src = pdfUrl;
+  });
+
+  closePdfModal.addEventListener("click", function () {
+    pdfModal.style.display = "none";
+    pdfFrame.src = "";
+  });
+
+  // Close modal when clicking outside
+  window.addEventListener("click", function (e) {
+    if (e.target === pdfModal) {
+      pdfModal.style.display = "none";
+      pdfFrame.src = "";
+    }
+  });
+});

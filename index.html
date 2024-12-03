@@ -65,12 +65,7 @@
             Full Stack Developer
           </h1>
 
-          <a
-            href="https://docs.google.com/document/d/1qPD6szLghMr0rW3nME7hUzJGwQI6QEf8/edit?usp=drive_link&ouid=102672867030443286672&rtpof=true&sd=true"
-            target="_blank"
-            class="button"
-            >Resume</a
-          >
+          <a href="#" class="button" id="resumeBtn">Resume</a>
         </div>
 
         <div class="home__social">
@@ -246,7 +241,7 @@
                 <i class="fas fa-play"></i>
               </div>
             </div>
-            <div class="project-buttons">
+            <div class="project-buttons" style="margin-bottom: 100px">
               <a
                 href="https://github.com/pawaradvait/CourseBackend"
                 class="project-btn github-btn"
@@ -258,16 +253,11 @@
           </div>
 
           <div class="work__img-container">
-            <div data-video="">
-              <img src="assets/img/myntra.png" />
-              <div class="project-title">
-                Myntra Clone (frontend and Backend)
-              </div>
-              <div class="play-icon">
-                <i class="fas fa-play"></i>
-              </div>
+            <div class="thumbnail-overlay" data-video="">
+              <img src="assets/img/school.png" />
+              <div class="project-title">Myntra Clone</div>
             </div>
-            <div class="project-buttons">
+            <div class="project-buttons" style="margin-bottom: 100px">
               <a
                 href="https://github.com/pawaradvait/myntra-ecom"
                 class="project-btn github-btn"
@@ -277,6 +267,8 @@
               </a>
             </div>
           </div>
+
+          <!-- Project 1 -->
 
           <!-- Repeat similar structure for other projects -->
           <!-- ... existing projects ... -->
@@ -313,7 +305,7 @@
             <input
               type="hidden"
               name="access_key"
-              value="bd634314-66b7-4922-9d08-4ee4c25861c0"
+              value="645cec7d-72f8-4f9d-ad90-0ecbc920ea2d"
             />
             <input
               type="text"
@@ -353,5 +345,18 @@
 
     <!--===== MAIN JS =====-->
     <script src="script.js"></script>
+    <div class="pdf-modal" id="pdfModal">
+      <div class="pdf-modal-content">
+        <span class="close-pdf-modal">&times;</span>
+        <div class="pdf-container">
+          <iframe id="pdfFrame" src="" frameborder="0"></iframe>
+        </div>
+        <div class="pdf-actions">
+          <a href="resumee.pdf" download class="button download-btn">
+            <i class="bx bx-download"></i> Download PDF
+          </a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
